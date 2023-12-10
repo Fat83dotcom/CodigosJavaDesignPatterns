@@ -1,4 +1,5 @@
 public class Car {
+    //Objeto complexo que poderá ser construído da forma que mais convier.
     private final int id;
     private final int nbrDoors;
     private final int nbrCilinders;
@@ -7,6 +8,7 @@ public class Car {
     private final String color;
     private final String wheelsType;
      
+    // O construtor deve ser protegido para que a classe não seja instanciada em outra parte do programa.
     protected Car(int id, int nbrDoors, int nbrCilinders, String brand, String model, String color, String wheelsType) {
         this.id = id;
         this.nbrDoors = nbrDoors;

@@ -1,6 +1,7 @@
 public class DirectorFord {
     private String brand = "Ford";
 
+    //Objeto sendo construído a partir da interface Builder.
     public void buildFordRaptor350(Builder builder) {
         builder.brand(this.brand)
         .id(865)

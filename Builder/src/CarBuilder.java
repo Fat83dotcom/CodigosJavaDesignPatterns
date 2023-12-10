@@ -1,4 +1,5 @@
 public class CarBuilder implements Builder {
+    //Atributos comuns entre qualquer carro.
     private int id;
     private int nbrDoors;
     private int nbrCilinders;
@@ -7,49 +8,43 @@ public class CarBuilder implements Builder {
     private String color;
     private String wheelsType;
 
-
-    public CarBuilder id(int id) {
+    //Setters especiais herdados da interface Builder.
+    public Builder id(int id) {
         this.id = id;
         return this;
     }
 
-
-    public CarBuilder nbrDoors(int nbrDoors) {
+    public Builder nbrDoors(int nbrDoors) {
         this.nbrDoors = nbrDoors;
         return this;
     }
 
-
-    public CarBuilder nbrCilinders(int nbrCilinders) {
+    public Builder nbrCilinders(int nbrCilinders) {
         this.nbrCilinders = nbrCilinders;
         return this;
     }
 
-
-    public CarBuilder brand(String brand) {
+    public Builder brand(String brand) {
         this.brand = brand;
         return this;
     }
 
-
-    public CarBuilder model(String model) {
+    public Builder model(String model) {
         this.model = model;
         return this;
     }
 
-
-    public CarBuilder color(String color) {
+    public Builder color(String color) {
         this.color = color;
         return this;
     }
 
-
-    public CarBuilder wheelsType(String wheelsType) {
+    public Builder wheelsType(String wheelsType) {
         this.wheelsType = wheelsType;
         return this;
     }
 
-
+    //Método/interface responsável por criar os produtos deste Concrete Builder.
     public Car build() {
         return new Car(id, nbrDoors, nbrCilinders, brand, model, color, wheelsType);
     }
